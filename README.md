@@ -1,4 +1,4 @@
 This is a sample Angular app by Jess Blokland. 
-It connects to the Google Maps Geocoding API to return location coordinates on a queried address. 
-It uses the UI router. 
-It features animations via nganimate and ngshhow/nghide.
+I use Bootstrap to style a responsive horizontal form with custom CSS radio buttons and checkboxes.
+The app connects to the Google Maps Geocoding API to return location coordinates for a queried address. Routing is done with the ui-router.
+It also features animations via nganimate on ngshhow/nghide.
