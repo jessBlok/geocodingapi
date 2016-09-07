@@ -1,0 +1,201 @@
+#toprow {
+    padding-top: 60px;
+}
+
+
+#formdiv {
+    background-color: #EEEEEC;
+    padding-bottom: 20px;
+    font-family: "Raleway";
+    padding-top: 30px;
+    }
+
+#ihreimmobilie {
+    font-weight: 200;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+input {
+   
+    font-size: 12px;
+    
+}
+
+label {
+ text-align: right;
+font-size: 14px;
+font-weight:  500;
+   
+}
+
+
+.buttonlabel {
+text-align: right;
+font-size: 14px;
+font-weight: 500 !important;
+
+}
+
+/* Here we must test cross browser compatibility and adjust accordingly.  This shows a general approach which is working on Chrome and Firefox, as well as the  Chrome browser for  Android*/
+
+#radiostyle label {
+    position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  margin-right:12px;
+}
+
+#radiostyle label input[type="radio"]{
+  position: absolute;
+  left:-9001px;
+}
+
+#radiostyle .circ{
+  background-color: #fff;
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  display:inline-block;
+  border: none;
+  top:1px;
+  position:relative;
+}
+
+#radiostyle .circ .dot{
+  width:12px;
+  height:12px;
+  display:block;
+  position: absolute;
+  border-radius: 50%;
+  left: 4px;
+  top: 4px;
+}
+
+#radiostyle label input[type="radio"]:checked ~ .circ .dot{
+  background-color: #FEB901;
+}
+
+/*STYLE CHECKBOXES*/
+
+
+#checkboxstyle label {
+    position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  margin-right:12px;
+}
+
+#checkboxstyle label input[type="checkbox"]{
+  position: absolute;
+  left:-9001px;
+}
+
+#checkboxstyle .box{
+  background-color: #fff;
+  width:20px;
+  height:20px;
+  border-radius: 5%;
+  display:inline-block;
+  border: none;
+  top:1px;
+  position:relative;
+}
+
+/*Here I ran out of time to get the checkmark set up so put in a yellow square*/
+
+#checkboxstyle .box .check{
+  width:12px;
+  height:12px;
+  display:block;
+  position: absolute;
+  border-radius: 5%;
+  left: 4px;
+  top: 4px;
+}
+
+
+
+#checkboxstyle label input[type="checkbox"]:checked ~ .box .check{
+  background-color: #FEB901;
+}
+
+/* STYLE BUTTON*/
+/*Here I had some trouble overriding Bootstrap on all button properties at once so I used !important a bit too frequently*/
+button {
+    background-color: #FEB901;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border: none;
+    border-bottom: 2px solid #E4A601;
+    border-radius: 5%;
+    width: 100%;
+    height: 50px;
+    
+    
+}
+
+.boldlabels {
+    font-weight: 800 !important;
+}
+
+
+.alert-message {
+  padding: 25px;
+  text-align: center;
+}
+
+
+/*ANIMATING MESSAGES using ng animate!  Animations thanks to animate.css Copyright (c) 2016 Daniel Eden*/
+
+/*This is the first time using ng-animate for me with ng-show/ng hide.   It was pretty fun!*/
+
+.ng-hide-remove {animation: 1.9s wobble;}
+
+
+
+@keyframes wobble {
+  from {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}

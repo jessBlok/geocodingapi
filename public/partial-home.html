@@ -1,0 +1,92 @@
+<div class="container">
+    
+ 
+   
+    <div class = "row" id="toprow">
+       
+    <div class = "col-md-8 col-md-offset-2" id= "formdiv">
+    
+        <div>
+            <h1 id= "ihreimmobilie">Your Property</h1>    
+      </div>
+    
+    <div class = "col-md-8 col-md-offset-4">
+        
+    <form class ="form-horizontal" ng-submit ="clickMe(add)" name = "theform">
+        
+        <div class="form-group">
+            <label for="inputText1" class="col-sm-4 control-label">Street</label>
+            <div class= "col-sm-8">
+            <input type="text" class="form-control" id="inputText1" ng-model="street" name ="street">
+            </div><!--End col-sm-10-->
+        </div>
+        <div class="form-group textin">
+            <label for="inputText2" class= "col-sm-4 control-label">House Number</label>
+            <div class = "col-sm-8">
+            <input type="text" class="form-control" id="inputText2" ng-model="housenumber" name ="housenumber">
+            </div><!--End col-sm-10-->
+        </div>
+        <div class="form-group textin">
+            <label for="inputText3" class="col-sm-4 control-label">Postal Code</label>
+            <div class= "col-sm-8">
+            <input type="text" class="form-control" id="inputText3"  ng-model="postalcode" name = "postalcode">
+            </div><!--End col-sm-10-->
+        </div>
+        <div class="form-group textin">
+            <label for="inputText4" class="col-sm-4 control-label">City</label>
+            <div class= "col-sm-8">
+            <input type="text" class="form-control" id="inputText4"  ng-model="city" name="city">
+            </div><!--End col-sm-10-->
+        </div>
+        <div class="form-group">
+            <div class = "col-sm-4">
+            </div>
+            <div class = "col-sm-8" id="radiostyle">
+                
+            <label for="radio1" class ="boldlabels">
+                <input type="radio" id="radio1" name="radio" ng-model="radio" value="1">
+                <span class="circ"><span class="dot"></span></span>
+                Private
+            </label>
+            <label for="radio2" class="boldlabels">
+                <input type="radio" id="radio2" name="radio" ng-model="radio" value="2">
+                <span class="circ"><span class="dot"></span></span>
+                Commerical</label></div>
+        </div>
+        <div class="form-group">
+            <div class = "col-sm-4"> 
+            </div>
+            <div class = "col-sm-8" id="checkboxstyle">
+              <label for="check1" class="boldlabels">
+                <input type="checkbox" id="check1" ng-model="check">
+                <span class="box"><span class="check"></span></span>
+                Please Call Me!
+              </label>
+            </div>
+        </div>
+            <div class = "col-sm-4"></div>
+            <div class = "col-md-8">
+                <button type="submit">Save</button>
+            </div>
+    </form>
+    </div><!--End inner div for form-->
+   
+    <div class = "row">
+        <hr>
+    </div>
+    <div ng-hide="statusResult != 'ZERO_RESULTS'" class="alert-message" id="animation1">
+        <h2>Sorry, but that address doesn't seem to be working.  Have another try!</h2>
+    </div>
+  
+   
+    <div ng-hide="statusResult !='OK'" class="alert-message" id="animation2">
+        <h2>We found your property!</h2>
+        <h3>The coordinates for this address are: {{latitude}}, {{longitude}}.</h3>
+    </div>
+    
+   
+        
+  
+   </div><!--End Row-->
+ </div><!--End Col Md 8-->
+</div><!--End Conatiner-->
